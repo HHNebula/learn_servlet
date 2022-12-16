@@ -3,6 +3,8 @@ package com.spring.learn_servlet;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import com.spring.learn_servlet.beans.MemberBean;
+
 public class DatasInfor {
 
     // search 인풋
@@ -35,6 +37,35 @@ public class DatasInfor {
         // 키는 다른이름 가능
         bundlesData.put("searchForm", searchForm);
         bundlesData.put("tablesListWithString", tablesListWithString);
+        bundlesData.put("dataWithMemberBean", datasInfor.getDataListWithMemberBean());
         return bundlesData;
     }
+
+    public MemberBean getDataWithMemberBean() {
+        MemberBean memberBean = new MemberBean();
+        memberBean.setFirstName("Mark");
+        memberBean.setSecondName("Otto");
+        memberBean.setHandleName("@mdo");
+
+        return memberBean;
+    }
+
+    public ArrayList getDataListWithMemberBean() {
+        ArrayList<MemberBean> membersList = new ArrayList<>();
+
+        MemberBean memberBean = new MemberBean();
+        memberBean.setFirstName("Mark");
+        memberBean.setSecondName("Otto");
+        memberBean.setHandleName("@mdo");
+        membersList.add(memberBean);
+
+        MemberBean memberBean2 = new MemberBean();
+        memberBean2.setFirstName("Jacob");
+        memberBean2.setSecondName("Thornton");
+        memberBean2.setHandleName("@fat");
+        membersList.add(memberBean2);
+
+        return membersList;
+    }
+
 }

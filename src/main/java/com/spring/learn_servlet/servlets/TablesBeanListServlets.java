@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import com.spring.learn_servlet.DatasInfor;
+import com.spring.learn_servlet.beans.MemberBean;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -22,6 +23,13 @@ public class TablesBeanListServlets extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
 
         DatasInfor datasInfor = new DatasInfor();
+        MemberBean memberBean = datasInfor.getDataWithMemberBean();
+        HashMap<String, Object> bundlesData = new HashMap<>();
+
+
+
+        System.out.println(memberBean.getFirstName() + " " + memberBean.getSecondName()
+                + " " + memberBean.getHandleName());
 
         // Title
         HashMap<String, String> searchForm = datasInfor.getSearchFormData();
@@ -47,6 +55,9 @@ public class TablesBeanListServlets extends HttpServlet {
         printWriter.println("  <body>");
         printWriter.println("    <div class='container'>");
         printWriter.println("      <div class='fs-3'>Tables with Bean</div>");
+        printWriter.println("<div class='fs-4'>" + memberBean.getFirstName() + " " + memberBean.getSecondName()
+                + " " + memberBean.getHandleName() + "</div>");
+
         printWriter.println("      <table class='table'>");
         printWriter.println("        <thead>");
         printWriter.println("          <tr>");
