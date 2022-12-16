@@ -1,11 +1,11 @@
-package com.yojulab.study_servlets.servlets;
+package com.spring.learn_servlet.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.yojulab.study_servlets.DatasInfor;
+import com.spring.learn_servlet.DatasInfor;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
