@@ -1,4 +1,4 @@
-package com.yojulab.study_servlets;
+package com.spring.learn_servlet;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package com.yojulab.study_servlets;
+package com.spring.learn_servlet;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

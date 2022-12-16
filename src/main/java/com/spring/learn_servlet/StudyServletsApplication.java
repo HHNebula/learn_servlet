@@ -1,4 +1,4 @@
-package com.yojulab.study_servlets;
+package com.spring.learn_servlet;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
